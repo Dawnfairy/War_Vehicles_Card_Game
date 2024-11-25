@@ -1,19 +1,18 @@
 package fnk.warvehiclescardgame.model;
 
-public class Obus extends Kara {
+public class Obus extends KaraAraclari {
 
-    public Obus() {
-        super(20, 0, 15);
+    public Obus(int seviyePuani, int dayaniklilik, int vurus, String sinif, String altSinif, int denizVurusAvantaji) {
+        super(seviyePuani, dayaniklilik, vurus, sinif, altSinif, denizVurusAvantaji);
     }
 
     @Override
-    protected boolean denizVurusAvantaji() {
-        return true; // Obüs, deniz araçlarına karşı avantajlı
+    public void durumGuncelle(int hasar, int seviyePuanArtis) {
+        super.durumGuncelle(hasar, seviyePuanArtis);
     }
 
     @Override
-    public void durumGuncelle(int hasar) {
-        dayaniklilik -= hasar;
-        if (dayaniklilik < 0) dayaniklilik = 0;
+    public void kartPuaniGoster() {
+        super.kartPuaniGoster();
     }
 }

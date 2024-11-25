@@ -1,19 +1,19 @@
 package fnk.warvehiclescardgame.model;
 
-public class Ucak extends Hava {
+public class Ucak extends HavaAraclari {
 
-    public Ucak() {
-        super(20, 0, 15);
+
+    public Ucak(int seviyePuani, int dayaniklilik, int vurus, String sinif, String altSinif, int karaVurusAvantaji) {
+        super(seviyePuani, dayaniklilik, vurus, sinif, altSinif, karaVurusAvantaji);
     }
 
     @Override
-    protected boolean karaVurusAvantaji() {
-        return true; // Uçak, kara araçlarına karşı avantajlı
+    public void durumGuncelle(int hasar, int seviyePuanArtis) {
+        super.durumGuncelle(hasar, seviyePuanArtis);
     }
 
     @Override
-    public void durumGuncelle(int hasar) {
-        dayaniklilik -= hasar;
-        if (dayaniklilik < 0) dayaniklilik = 0;
+    public void kartPuaniGoster() {
+        super.kartPuaniGoster();
     }
 }

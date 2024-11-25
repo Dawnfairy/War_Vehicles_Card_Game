@@ -1,19 +1,25 @@
 package fnk.warvehiclescardgame.model;
 
-public class KFS extends Kara {
+public class KFS extends KaraAraclari {
 
-    public KFS() {
-        super(10, 0, 20);
+    private int havaVurusAvantaji;
+
+    public KFS(int seviyePuani, int dayaniklilik, int vurus, String sinif, String altSinif, int denizVurusAvantaji, int havaVurusAvantaji) {
+        super(seviyePuani, dayaniklilik, vurus, sinif, altSinif, denizVurusAvantaji);
+        this.havaVurusAvantaji = havaVurusAvantaji;
     }
 
     @Override
-    protected boolean denizVurusAvantaji() {
-        return false; // model.KFS'nin deniz vuruş avantajı yok
+    public void durumGuncelle(int hasar, int seviyePuanArtis) {
+        super.durumGuncelle(hasar, seviyePuanArtis);
     }
 
     @Override
-    public void durumGuncelle(int hasar) {
-        dayaniklilik -= hasar;
-        if (dayaniklilik < 0) dayaniklilik = 0;
+    public void kartPuaniGoster() {
+        super.kartPuaniGoster();
+    }
+
+    public int getHavaVurusAvantaji() {
+        return havaVurusAvantaji;
     }
 }

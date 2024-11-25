@@ -1,19 +1,25 @@
 package fnk.warvehiclescardgame.model;
 
-public class Sida extends Deniz {
+public class Sida extends DenizAraclari {
 
-    public Sida() {
-        super(15, 0, 20);
+    private int karaVurusAvantaji;
+
+    public Sida(int seviyePuani, int dayaniklilik, int vurus, String sinif, String altSinif, int havaVurusAvantaji, int karaVurusAvantaji) {
+        super(seviyePuani, dayaniklilik, vurus, sinif, altSinif, havaVurusAvantaji);
+        this.karaVurusAvantaji = karaVurusAvantaji;
     }
 
     @Override
-    protected boolean havaVurusAvantaji() {
-        return false; // model.Sida'nın hava vuruş avantajı yok
+    public void durumGuncelle(int hasar, int seviyePuanArtis) {
+        super.durumGuncelle(hasar, seviyePuanArtis);
     }
 
     @Override
-    public void durumGuncelle(int hasar) {
-        dayaniklilik -= hasar;
-        if (dayaniklilik < 0) dayaniklilik = 0;
+    public void kartPuaniGoster() {
+        super.kartPuaniGoster();
+    }
+
+    public int getKaraVurusAvantaji() {
+        return karaVurusAvantaji;
     }
 }

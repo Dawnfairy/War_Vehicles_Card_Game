@@ -1,19 +1,18 @@
 package fnk.warvehiclescardgame.model;
 
-public class Firkateyn extends Deniz {
-
-    public Firkateyn() {
-        super(25, 0, 15);
+public class Firkateyn extends DenizAraclari {
+    public Firkateyn(int seviyePuani, int dayaniklilik, int vurus, String sinif, String altSinif, int havaVurusAvantaji) {
+        super(seviyePuani, dayaniklilik, vurus, sinif, altSinif, havaVurusAvantaji);
     }
 
     @Override
-    protected boolean havaVurusAvantaji() {
-        return true; // Fırkateyn, hava araçlarına karşı avantajlı
+    public void durumGuncelle(int hasar, int seviyePuanArtis) {
+        super.durumGuncelle(hasar, seviyePuanArtis);
     }
 
     @Override
-    public void durumGuncelle(int hasar) {
-        dayaniklilik -= hasar;
-        if (dayaniklilik < 0) dayaniklilik = 0;
+    public void kartPuaniGoster() {
+        super.kartPuaniGoster();
     }
+
 }
