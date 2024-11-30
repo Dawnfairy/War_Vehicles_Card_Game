@@ -1,8 +1,10 @@
 package fnk.warvehiclescardgame.model;
 
+import javax.swing.*;
+
 public class Sida extends DenizAraclari {
 
-    private int karaVurusAvantaji;
+    private final int karaVurusAvantaji;
 
     public Sida(int seviyePuani, int dayaniklilik, int vurus, String sinif, String altSinif, int havaVurusAvantaji, int karaVurusAvantaji) {
         super(seviyePuani, dayaniklilik, vurus, sinif, altSinif, havaVurusAvantaji);
@@ -15,8 +17,8 @@ public class Sida extends DenizAraclari {
     }
 
     @Override
-    public void kartPuaniGoster() {
-        super.kartPuaniGoster();
+    public void kartPuaniGoster(JTextArea textArea) {
+        super.kartPuaniGoster(textArea);
     }
 
     public int getKaraVurusAvantaji() {

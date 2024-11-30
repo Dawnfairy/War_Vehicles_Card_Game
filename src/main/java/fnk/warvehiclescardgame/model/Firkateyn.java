@@ -1,5 +1,7 @@
 package fnk.warvehiclescardgame.model;
 
+import javax.swing.*;
+
 public class Firkateyn extends DenizAraclari {
     public Firkateyn(int seviyePuani, int dayaniklilik, int vurus, String sinif, String altSinif, int havaVurusAvantaji) {
         super(seviyePuani, dayaniklilik, vurus, sinif, altSinif, havaVurusAvantaji);
@@ -11,8 +13,8 @@ public class Firkateyn extends DenizAraclari {
     }
 
     @Override
-    public void kartPuaniGoster() {
-        super.kartPuaniGoster();
+    public void kartPuaniGoster(JTextArea textArea) {
+        super.kartPuaniGoster(textArea);
     }
 
 }

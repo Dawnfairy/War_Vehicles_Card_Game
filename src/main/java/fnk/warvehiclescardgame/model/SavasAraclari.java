@@ -1,5 +1,9 @@
 package fnk.warvehiclescardgame.model;
 
+import javax.swing.*;
+
+import static fnk.warvehiclescardgame.Oyun.logger;
+
 public abstract class SavasAraclari {
 
     protected int seviyePuani;
@@ -15,8 +19,9 @@ public abstract class SavasAraclari {
     }
 
     // Kart puanlarını gösteren metot
-    public void kartPuaniGoster() {//dayanıklılık ve seviye puanı ¨ozelliklerini oyunda g¨ostermek i¸cin
-        System.out.println("Dayanıklılık: " + dayaniklilik + ", Seviye Puanı: " + seviyePuani);
+    public void kartPuaniGoster(JTextArea textArea) {//dayanıklılık ve seviye puanı ¨ozelliklerini oyunda g¨ostermek i¸cin
+        logger("Dayanıklılık: " + dayaniklilik + "\nSeviye Puanı: " + seviyePuani);
+        textArea.append("Dayanıklılık: " + dayaniklilik + "\nSeviye Puanı: " + seviyePuani + "\n");
     }
 
     public abstract void durumGuncelle(int hasar, int seviyePuanArtis);

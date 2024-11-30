@@ -1,5 +1,7 @@
 package fnk.warvehiclescardgame.model;
 
+import javax.swing.*;
+
 public class Ucak extends HavaAraclari {
 
 
@@ -13,7 +15,7 @@ public class Ucak extends HavaAraclari {
     }
 
     @Override
-    public void kartPuaniGoster() {
-        super.kartPuaniGoster();
+    public void kartPuaniGoster(JTextArea textArea) {
+        super.kartPuaniGoster(textArea);
     }
 }

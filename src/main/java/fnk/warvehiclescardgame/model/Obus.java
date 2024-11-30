@@ -1,5 +1,7 @@
 package fnk.warvehiclescardgame.model;
 
+import javax.swing.*;
+
 public class Obus extends KaraAraclari {
 
     public Obus(int seviyePuani, int dayaniklilik, int vurus, String sinif, String altSinif, int denizVurusAvantaji) {
@@ -12,7 +14,7 @@ public class Obus extends KaraAraclari {
     }
 
     @Override
-    public void kartPuaniGoster() {
-        super.kartPuaniGoster();
+    public void kartPuaniGoster(JTextArea textArea) {
+        super.kartPuaniGoster(textArea);
     }
 }
